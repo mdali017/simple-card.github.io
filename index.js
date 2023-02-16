@@ -33,6 +33,7 @@ document.getElementById('first-card').addEventListener('click', function(){
 
     // Just Call displayData Function
     displayData(firstProductName, firstPrice, firstQuantity, priceTotal);
+    disableButton('first-card');
     
     
 })
@@ -51,6 +52,7 @@ document.getElementById('second-card').addEventListener('click', function(e){
   
 
     displayData(sProductName, sProductPrice, sQuantity, secondSumTotal);
+    disableButton('second-card');
 
 })
 
@@ -71,6 +73,7 @@ document.getElementById('third-card').addEventListener('click', function(){
 
    
     displayData(thirdProductName, thirdPrice, thirdQuantity, thirdPriceTotal);
+    disableButton('third-card');
     
     
 })
@@ -91,6 +94,7 @@ document.getElementById('forth-card').addEventListener('click', function(){
 
    
     displayData(thirdProductName, thirdPrice, thirdQuantity, thirdPriceTotal);
+    disableButton('forth-card')
     
     
 })
@@ -109,8 +113,14 @@ document.getElementById('forth-card').addEventListener('click', function(){
   console.log(total);
 
   displayData(productName, productPrice, productQuantity, total);
+  disableButton('last-card')
 
   })
+
+//   Disable Button 
+function disableButton(id){
+    document.getElementById(id).setAttribute('disabled', true);
+}
 
   
 
